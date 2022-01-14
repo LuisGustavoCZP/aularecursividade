@@ -31,9 +31,14 @@ function isString (myVar)
     return (typeof myVar === 'string' || myVar instanceof String);
 }
 
+function isArray (myVar)
+{
+    return !(myVar.length == undefined || isString(myVar));
+}
+
 function recursive (mtz) 
 {
-    if(mtz.length == undefined || isString(mtz)) {
+    if(!isArray(mtz)) {
         console.log(mtz);
         return;
     }

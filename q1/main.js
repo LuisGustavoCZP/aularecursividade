@@ -5,4 +5,9 @@ function recursive (n)
     else return 1;
 }
 
-recursive (3);
+function fatorial (n) 
+{
+    console.log(`O resultado de ${n}! é ${recursive (n)}`);
+}
+
+fatorial (5);
